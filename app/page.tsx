@@ -13,11 +13,11 @@ export default function Home() {
     <div>
       <h1 className='text-2xl mt-4 ml-[40%]'>Solana Wallet Adapter</h1>
       <WalletProvider
-        config={{
-          autoConnect: true,
-          walletAllowList: ['Phantom', 'Backpack', 'Metamask'],
-          onError: (err: any) => console.error('Wallet error:', err),
-        }}
+      // config={{
+      //   autoConnect: true,
+      //   walletAllowList: ['Phantom', 'Backpack', 'Metamask'],
+      //   onError: (err: any) => console.error('Wallet error:', err),
+      // }}
       >
         <WalletConnectButton />
         <GillProvider>

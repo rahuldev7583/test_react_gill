@@ -1,3 +1,4 @@
+'use client';
 import { useWalletAccountTransactionSendingSigner } from '@solana/react';
 
 import { useWallet } from '@gillsdk/react';
