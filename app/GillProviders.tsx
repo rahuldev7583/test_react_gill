@@ -14,8 +14,8 @@ const queryClient = new QueryClient({
 });
 
 const solanaClient = createSolanaClient({
-  urlOrMoniker:
-    'https://devnet.helius-rpc.com/?api-key=50378b40-aff1-4501-bdc2-62e60046e3d0',
+
+ urlOrMoniker: process.env.NEXT_PUBLIC_RPC_URL || 'devnet',
   cluster: ClusterType.Devnet,
 });
 
