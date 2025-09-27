@@ -4,8 +4,6 @@ import React, { useState } from 'react';
 import { getAddMemoInstruction } from '@solana-program/memo'; // memo ix builder
 import { useGillSignTransaction } from '@gillsdk/react';
 import bs58 from 'bs58';
-import { getPublicKeyFromAddress } from 'gill';
-import { log } from 'console';
 
 export function MemoTransactionDemo() {
   const { account, signTransaction } = useGillSignTransaction();

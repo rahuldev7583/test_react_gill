@@ -13,7 +13,7 @@
     "@solana-program/memo": "^0.8.0",
     "@solana/react": "^3.0.3",
     "@types/bs58": "^5.0.0",
-    "bs58": "^6.0.0",
+    "bs58": "^5.0.0",
     "gill": "file:../gill/packages/gill",
     "next": "15.5.2",
     "next-transpile-modules": "^10.0.1"

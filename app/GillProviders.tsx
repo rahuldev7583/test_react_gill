@@ -1,6 +1,6 @@
 'use client';
 
-import { createSolanaClient } from 'gill';
+import { ClusterType, createSolanaClient } from 'gill';
 import { SolanaProvider } from '@gillsdk/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
@@ -14,7 +14,9 @@ const queryClient = new QueryClient({
 });
 
 const solanaClient = createSolanaClient({
-  urlOrMoniker: process.env.NEXT_PUBLIC_RPC_URL || 'devnet',
+  urlOrMoniker:
+    'https://devnet.helius-rpc.com/?api-key=50378b40-aff1-4501-bdc2-62e60046e3d0',
+  cluster: ClusterType.Devnet,
 });
 
 export function GillProvider({ children }: { children: React.ReactNode }) {
