@@ -1,6 +1,6 @@
 'use client';
 
-import { ClusterType, createSolanaClient } from 'gill';
+import {  Cluster, createSolanaClient } from 'gill';
 import { SolanaProvider } from '@gillsdk/react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
@@ -14,9 +14,8 @@ const queryClient = new QueryClient({
 });
 
 const solanaClient = createSolanaClient({
-
  urlOrMoniker: process.env.NEXT_PUBLIC_RPC_URL || 'devnet',
-  cluster: ClusterType.Devnet,
+ cluster: Cluster.Devnet
 });
 
 export function GillProvider({ children }: { children: React.ReactNode }) {

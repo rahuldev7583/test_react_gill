@@ -5,14 +5,14 @@ import { GillProvider } from './GillProviders';
 import WalletTest from './WalletTest';
 import GetBalance from './Gill_Test';
 import { useState } from 'react';
-import { WalletProvider } from '@gillsdk/react';
 import { WalletConnectButton } from './WalletConnect';
+import { WalletContextProvider } from '@gillsdk/react';
 
 export default function Home() {
   return (
     <div>
       <h1 className='text-2xl mt-4 ml-[40%]'>Solana Wallet Adapter</h1>
-      <WalletProvider
+      <WalletContextProvider
       // config={{
       //   autoConnect: true,
       //   walletAllowList: ['Phantom', 'Backpack', 'Metamask'],
@@ -23,7 +23,7 @@ export default function Home() {
         <GillProvider>
           <GetBalance />
         </GillProvider>
-      </WalletProvider>
+      </WalletContextProvider>
     </div>
   );
 }
