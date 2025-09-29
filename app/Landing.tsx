@@ -7,8 +7,10 @@ import { MemoTransactionDemo } from './SignTxnWithGill';
 import TestSignTransaction from './SignIn';
 import TestTransaction from './TransactionTest';
 import FinalTransaction from './FinalTxn';
+import TestGillSignAllTransactions from './TestMultipleTxn';
+import TestSignAndSendTxn from './SignAndSendTxn';
 
-const GetBalance = () => {
+const Landing = () => {
   const { account, wallet } = useWallet();
   const { rpc, cluster } = useSolanaClient();
 
@@ -42,9 +44,11 @@ const GetBalance = () => {
         {/* <TestSignTransaction /> */}
         {/* <TestTransaction /> */}
         <FinalTransaction />
+        <TestGillSignAllTransactions/>
+        <TestSignAndSendTxn/>
       </div>
     )
   );
 };
 
-export default GetBalance;
+export default Landing;

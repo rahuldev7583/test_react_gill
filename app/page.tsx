@@ -2,11 +2,10 @@
 
 import MintDetails from './Nft';
 import { GillProvider } from './GillProviders';
-import WalletTest from './WalletTest';
-import GetBalance from './Gill_Test';
 import { useState } from 'react';
 import { WalletConnectButton } from './WalletConnect';
 import { WalletContextProvider } from '@gillsdk/react';
+import Landing from './Landing';
 
 export default function Home() {
   return (
@@ -21,7 +20,7 @@ export default function Home() {
       >
         <WalletConnectButton />
         <GillProvider>
-          <GetBalance />
+          <Landing/>
         </GillProvider>
       </WalletContextProvider>
     </div>
